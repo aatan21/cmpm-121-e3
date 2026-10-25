@@ -5,7 +5,10 @@ const spin = document.querySelector<HTMLButtonElement>("#spin")!;
 const face = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 face.setAttribute("viewBox", "0 0 200 200");
 face.setAttribute("role", "img");
-face.setAttribute("aria-label", "A neutral face");
+face.setAttribute(
+  "aria-label",
+  "A playful face surrounded by two rings of colorful dots",
+);
 
 const head = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
 head.setAttribute("cx", "100");
@@ -58,6 +61,27 @@ mouth.setAttribute("stroke", "#302c29");
 mouth.setAttribute("stroke-width", "4");
 mouth.setAttribute("stroke-linecap", "round");
 face.append(mouth);
+
+// Add two rings of colorful dots around the face.
+for (let ring = 0; ring < 2; ring++) {
+  const radius = 89 + ring * 7;
+
+  for (let i = 0; i < 60; i++) {
+    const angle = (i / 60) * Math.PI * 2;
+
+    const dot = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "circle",
+    );
+
+    dot.setAttribute("cx", String(100 + radius * Math.cos(angle)));
+    dot.setAttribute("cy", String(100 + radius * Math.sin(angle)));
+    dot.setAttribute("r", "2.8");
+    dot.setAttribute("fill", ring === 0 ? "#e98084" : "#805ad5");
+
+    face.append(dot);
+  }
+}
 
 portrait.append(face);
 
