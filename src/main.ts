@@ -1,3 +1,9 @@
+// @deno-types="./asset-url.d.ts"
+import sunglassesUrl from "./assets/sunglasses-svgrepo-com.svg?no-inline";
+
+// @deno-types="./asset-url.d.ts"
+import bowTieUrl from "./assets/bow-tie-svgrepo-com.svg?no-inline";
+
 const portrait = document.querySelector<HTMLDivElement>("#portrait")!;
 const spin = document.querySelector<HTMLButtonElement>("#spin")!;
 
@@ -5,7 +11,7 @@ const spin = document.querySelector<HTMLButtonElement>("#spin")!;
 const face = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 face.setAttribute("viewBox", "0 0 200 200");
 face.setAttribute("role", "img");
-face.setAttribute("aria-label", "A neutral face");
+face.setAttribute("aria-label", "A face wearing sunglasses and a bow tie");
 
 const head = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
 head.setAttribute("cx", "100");
@@ -58,6 +64,36 @@ mouth.setAttribute("stroke", "#302c29");
 mouth.setAttribute("stroke-width", "4");
 mouth.setAttribute("stroke-linecap", "round");
 face.append(mouth);
+
+// Image: sunglasses-svgrepo-com.svg
+// Source: https://www.svgrepo.com/svg/80117/sunglasses
+// Creator: Not specified; uploader: SVG Repo
+// License: CC0
+const sunglasses = document.createElementNS(
+  "http://www.w3.org/2000/svg",
+  "image",
+);
+sunglasses.setAttribute("href", sunglassesUrl);
+sunglasses.setAttribute("x", "42");
+sunglasses.setAttribute("y", "40");
+sunglasses.setAttribute("width", "116");
+sunglasses.setAttribute("height", "90");
+face.append(sunglasses);
+
+// Image: bow-tie-svgrepo-com.svg
+// Source: https://www.svgrepo.com/svg/28928/bow-tie
+// Creator: Not specified; uploader: SVG Repo
+// License: CC0
+const bowTie = document.createElementNS(
+  "http://www.w3.org/2000/svg",
+  "image",
+);
+bowTie.setAttribute("href", bowTieUrl);
+bowTie.setAttribute("x", "77");
+bowTie.setAttribute("y", "165");
+bowTie.setAttribute("width", "46");
+bowTie.setAttribute("height", "30");
+face.append(bowTie);
 
 portrait.append(face);
 
