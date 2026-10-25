@@ -85,7 +85,7 @@ function buildFace(): SVGSVGElement {
   nose.setAttribute("stroke-width", "4");
   nose.setAttribute("stroke-linecap", "round");
   face.append(nose);
-  
+
   const mouth = document.createElementNS("http://www.w3.org/2000/svg", "path");
 
   mouth.setAttribute("d", "M 68 125 Q 100 163 132 125");

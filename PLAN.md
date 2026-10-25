@@ -34,3 +34,11 @@ Added a yellow-to-orange gradient to the head and replaced the straight mouth wi
 ## Selection Criterion
 
 I will choose the portrait that looks the most expressive and recognizable at a small size.
+
+## Final Decision
+
+**Chosen branch: C - Color and Curves**
+
+I chose alternative C because the yellow-to-orange gradient and curved smile make the face look cheerful and expressive while remaining easy to recognize at a small size. Alternative A's colorful rings were visually interesting, but they added more decoration around the face. Alternative B's sunglasses and bow tie gave the character a distinct appearance, but the accessories covered some of the original facial features.
+
+Overall, C best meets my selection criterion of creating an expressive and recognizable portrait at a small size. Alternatives A and B remain preserved on their separate branches and were not merged into main.
